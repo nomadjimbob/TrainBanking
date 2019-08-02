@@ -17,10 +17,11 @@ ref.set(obj);    // Overwrites the path
 ref.update(obj); // Updates only the specified attributes 
 */
 
-var usersRef = firebase.app().database().ref.child('users');
+var usersRef = firebase.app().database().ref().child('users');
 
 usersRef.once('value', function (snap) {
  snap.forEach(function (childSnap) {
   console.log('user', childSnap.val());
  });
 });
+
