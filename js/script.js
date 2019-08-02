@@ -19,12 +19,13 @@ ref.update(obj); // Updates only the specified attributes
 
 var transRef = firebase.database().ref('transaction/');
 var itemRef = transRef.push();
-itemRef.set({amount:96.58,description:"pay james"});
+itemRef.set({amount:108.70,description:"pay dad"});
 
-var obj = {password: "456"};
-ref.push(obj);   // Creates a new ref with a new "push key"
-ref.set(obj);    // Overwrites the path
-ref.update(obj); // Updates only the specified attributes 
+//var ref = firebase.database().ref('users/88888');
+//var obj = {password: "456"};
+//ref.push(obj);   // Creates a new ref with a new "push key"
+//ref.set(obj);    // Overwrites the path
+//ref.update(obj); // Updates only the specified attributes 
 
 
 
