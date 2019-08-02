@@ -10,7 +10,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 //var database = firebase.database();
-var ref = firebase.app().database().ref('users');
+var ref = firebase.database().ref('users');
 var obj = {password: "123"};
 ref.push(obj);   // Creates a new ref with a new "push key"
 ref.set(obj);    // Overwrites the path
