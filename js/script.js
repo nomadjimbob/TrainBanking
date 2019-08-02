@@ -19,10 +19,10 @@ ref.update(obj); // Updates only the specified attributes
 
 
 
-var usersRef = firebase.app().database().ref().child('users');
+var usersRef = firebase.app().database().ref('users');
 
 
-usersRef.orderBy('users', 'desc').once('value', function (snap) {
+usersRef.once('value', function (snap) {
  snap.forEach(function (childSnap) {
   console.log('user', childSnap.val());
  });
