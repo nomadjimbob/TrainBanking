@@ -19,7 +19,8 @@ ref.update(obj); // Updates only the specified attributes
 
 
 
-var usersRef = firebase.app().database().ref().child('users').where('password', '==', '123');
+//var usersRef = firebase.app().database().ref().child('users');
+var usersRef = firebase.app().database().collection('users');
 
 
 usersRef.once('value', function (snap) {
