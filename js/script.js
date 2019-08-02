@@ -27,6 +27,6 @@ var usersRef = firebase.app().database().ref('/users/').orderByChild('password')
 usersRef.once('value', function (snap) {
  snap.forEach(function (childSnap) {
   console.log('user', childSnap.val());
-  console.log('key', childSnap.getKey());
+  console.log('key', childSnap.key);
  });
 });
